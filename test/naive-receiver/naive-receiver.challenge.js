@@ -58,9 +58,6 @@ describe("[Challenge] Naive receiver", function () {
     /** CODE YOUR SOLUTION HERE */
     const attacker = await ethers.getContractFactory("NaiveAttacker");
     await attacker.deploy(pool.address, receiver.address);
-
-    const balance = await ethers.provider.getBalance(receiver.address);
-    console.log(balance.toString());
   });
 
   after(async function () {
